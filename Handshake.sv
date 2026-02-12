@@ -7,7 +7,7 @@
 	 
 	 property p1;
 		@(posedge clk)
-			start |-> (data_valid[*4] ## !data_valid);
+		 start |-> (data_valid[*4] ##1 !data_valid);
 	endproperty
 	
 	assert property(p1);
